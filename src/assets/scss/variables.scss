@@ -1,0 +1,37 @@
+// Color system
+$primary: #FD542D;
+$white: #fff;
+$lightGray: #EBF0F3;
+$Gray: #C6C6C6;
+$darkGray: #39383b;
+$darkdarkGray: #2D2D2D;
+
+
+
+// Variables
+$font-family-base: 'Jost', sans-serif;
+$font-family-second: 'Caveat', cursive;
+$body-color: $darkdarkGray;
+$body-bg: $white;
+$font-size-root: 16px;
+$trans: .4s ease;
+
+
+//Components
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl:1600px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px,
+        xxxl: 1470px
+);

@@ -1,0 +1,338 @@
+
+
+/**************Block Banner***************/
+.banner {
+  .banner-body {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+  /**************Block Product***************/
+.product {
+  .trend-game { 
+    .col-6 {
+      @media (max-width: 400px) {
+        width: 100%;
+      }
+    }
+  }
+  .__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .trend-game-heading {
+    .trend-game-more {
+      display: inline-block;
+      padding-right: 45px;
+      vertical-align: middle;
+      background: url('../img/arrow-right.svg') no-repeat 40px center;
+      transition: $transition-base;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+
+      &:hover,
+      &:focus {
+        background: url('../img/arrow-right.svg') no-repeat 55px center;
+      }
+    }
+  }
+
+  .game-card {
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    padding: 0;
+    transition: all .3s ease;
+    margin-bottom: 30px;
+
+    &:hover .card-info {
+      @media (min-width: 1025px) {
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      display: block;
+      height: 100%;
+    }
+
+    .card-img {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      color: #000;
+      overflow: hidden;
+      margin: 0;
+      transition: all .4s ease;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      transition: all .4s ease;
+      border-radius: 5px 5px 6px 6px;
+    }
+
+    .card-category {
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: -21px;
+      z-index: 1;
+
+      a {
+        display: inline-block;
+        border-radius: 5px 5px 0 0;
+        padding: 1px 5px 15px;
+        font-size: 10px;
+        white-space: nowrap;
+        margin-bottom: 3px;
+        cursor: pointer;
+
+        &.hit {
+          background: $primary;
+        }
+
+        &.new {
+          background: $green-400;
+        }
+
+        &.addition {
+          background: $purple-400;
+        }
+
+        &.pre-order {
+          background: $orange-400;
+        }
+
+        &.not-print {
+          background: $gray-600;
+        }
+
+        &.expected {
+          background: $blue-400;
+        }
+
+        &.kit {
+          background: $pink-400;
+        }
+
+        &.used {
+          background: $cyan-400;
+        }
+
+        &.sale {
+          background: $red-500;
+        }
+      }
+    }
+
+    .card-text {
+      display: inline-block;
+      text-align: start;
+
+      a {
+        display: inline-block;
+        font-size: 17px;
+      }
+
+      .stock {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .in-stock {
+        color: #38e24e;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 7px;
+          height: 7px;
+          background: #38e24e;
+          margin-right: 5px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+
+    .card-info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      font-size: 9px;
+      text-align: center;
+      color: $white;
+      height: 70px;
+      padding-top: 35px;
+      transition: all .5s;
+      border-radius: 0 0 5px 5px;
+      background: linear-gradient(transparent, transparent, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
+      //@media (min-width: 1025px) {
+      transform: translateY(100px);
+      //}
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        flex: 1 1 30px;
+        height: 33px;
+        align-items: center;
+        padding: 0 3px 3px;
+
+        &:not(:last-child) {
+          //margin-right: 4px;
+        }
+
+        &.not-svg {
+          line-height: 30px;
+          font-size: 12px;
+        }
+
+        &.wider {
+          flex: 2 1 40px;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .card-comment {
+        line-height: 25px;
+        position: relative;
+
+        span {
+          text-align: center;
+          line-height: 20px;
+          font-size: 10px;
+          font-weight: 500;
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          background: $primary;
+          position: absolute;
+          top: -9px;
+          right: -4px;
+          opacity: 100%;
+          color: black;
+          z-index: 5;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 5px;
+      height: auto;
+      transition: all .5s;
+      align-items: start;
+    }
+
+    .article {
+      margin-top: 15px;
+      font-size: 11px;
+      color: $gray-500;
+      font-weight: 300;
+    }
+
+    .card-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all .3s ease;
+      margin-top: 15px;
+
+      .price-old {
+        font-size: 11px;
+        color: $gray-500;
+        text-decoration: line-through;
+        position: relative;
+      }
+
+      .price {
+        font-size: 1.7rem;
+        color: $primary;
+        margin-bottom: 0;
+        transition: all .3s ease;
+        //position: relative;
+      }
+
+      span {
+        font-size: 12px;
+        color: white;
+        font-weight: 300;
+      }
+
+      .discount {
+        font-size: 1.4rem;
+        color: red;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.top-game {
+  .top-game-heading {
+    ul {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    li + li {
+      margin-left: 5px;
+    }
+  }
+  .game-card {
+    .card-img {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 50%;
+      a {
+        display: block;
+      }
+      img {
+        border-radius: 5px;
+      }
+    }
+    .card-text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      height: 80px;
+      padding-top: 35px;
+      transition: all .5s;
+      background: linear-gradient(transparent, transparent, rgba(0,0,0,.5), rgba(0,0,0,.9));
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+

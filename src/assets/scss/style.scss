@@ -1,0 +1,21 @@
+//my variables
+@import "variables";
+
+//переопределение стилей Bootstrap
+@import "pagination";
+
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+//@import "~select2/dist/css/select2.min.css";
+//@import "~slick-carousel/slick/slick";
+
+//my styles Main page
+@import "main";
+@import "header";
+@import "intro";
+
+
+
+
+
